@@ -38,10 +38,10 @@ public class GoogleSearchSteps {
 		driver.get(url);
 	}
 
-	@When("User enters a text in google search box")
-	public void user_enters_a_text_in_google_search_box() {	
+	@When("^User enters \"([^\"]*)\" in google search box$")
+	public void user_enters_searchtext_in_google_search_box(String searchtext) {	
 		
-		driver.findElement(searchBox).sendKeys("Selenium");
+		driver.findElement(searchBox).sendKeys(searchtext);
 	}
 
 	@And("User hits enter")
