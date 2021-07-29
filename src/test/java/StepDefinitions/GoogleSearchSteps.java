@@ -18,12 +18,13 @@ public class GoogleSearchSteps {
 	WebDriver driver = null;
 	By searchBox = By.xpath("//body[1]/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]");
 
-	@Given("Browser is open")
+	@Given("Browser is open") 
 	public void browser_is_open() {
 
 		String projectPath = System.getProperty("user.dir");
 
 		System.setProperty("webdriver.chrome.driver", projectPath + "/src/test/resources/Drivers/chromedriver");
+		
 		driver = new ChromeDriver();
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

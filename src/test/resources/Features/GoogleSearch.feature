@@ -13,3 +13,4 @@ Feature: Check Google search functionality
     | searchtext |
     | Selenium |
     | Testing |
+    | Cucumber |
